@@ -1,0 +1,62 @@
+{
+  "name": "AI BI Demo Webhook Flow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ai-bi-summary",
+        "responseMode": "responseNode"
+      },
+      "id": "WebhookNode",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 260]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json;\nreturn [{ json: { received: true, source: body.source, event: body.event, insightCount: Array.isArray(body.insights) ? body.insights.length : 0, executive_summary: body.executive_summary || '' } }];"
+      },
+      "id": "CodeNode",
+      "name": "Transform Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [520, 260]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{$json}}"
+      },
+      "id": "RespondNode",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [780, 260]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Transform Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transform Payload": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

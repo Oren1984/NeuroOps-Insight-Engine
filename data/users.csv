@@ -1,0 +1,9 @@
+user_id,signup_date,country,role
+U001,2025-12-01,Israel,admin
+U002,2025-12-05,Israel,user
+U003,2025-12-10,USA,user
+U004,2025-12-12,Germany,manager
+U005,2025-12-15,UK,user
+U006,2025-12-20,Israel,user
+U007,2026-01-01,France,user
+U008,2026-01-10,USA,user
