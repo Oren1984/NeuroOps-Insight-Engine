@@ -1,0 +1,45 @@
+# Docker ignore file
+
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit cache
+.streamlit/
+
+# Docker artifacts
+docker-compose.override.yml
+
+# Build artifacts
+dist/
+build/
+
+# Test artifacts
+coverage/
+.pytest_cache/

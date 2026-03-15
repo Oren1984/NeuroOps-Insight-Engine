@@ -1,3 +1,8 @@
+# main.py - Entry point for the AI Business Intelligence Platform
+# This script initializes the platform, runs core analytics,
+# generates insights, and demonstrates the
+# capabilities of the agent and RAG components.
+
 from src.data_loader.loader import init_sqlite
 from src.analytics.analytics import (
     feature_usage_stats,

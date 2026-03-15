@@ -1,3 +1,10 @@
+# src/integrations/n8n_client.py
+# This file is part of the 2FAS iOS app
+# This module defines functions for building payloads and sending data to n8n webhooks,
+# allowing the application to integrate with n8n for automation
+# and workflow management based on generated insights and executive summaries.
+# It also includes a demo mode for testing without sending live data.
+
 import os
 import requests
 from datetime import datetime

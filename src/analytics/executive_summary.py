@@ -1,3 +1,10 @@
+# src/analytics/executive_summary.py
+# This file is part of the 2FAS iOS app
+# This module defines the generate_executive_summary function, 
+# which compiles key business intelligence metrics
+# and auto-generated insights to create a concise executive summary for product,
+# support, and operations leaders
+
 from src.analytics.analytics import (
     feature_usage_stats,
     inactive_users,

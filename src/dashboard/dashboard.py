@@ -1,3 +1,10 @@
+# src/dashboard/dashboard.py
+# This file is part of the 2FAS iOS app
+# This module defines the main dashboard interface using Streamlit,
+# which integrates analytics, LLM agent interactions, RAG-based knowledge retrieval,
+# executive summary generation,
+# and n8n automation features into a cohesive business intelligence platform.
+
 import os
 import streamlit as st
 from src.data_loader.loader import init_sqlite
@@ -24,7 +31,7 @@ provider_name = os.getenv("LLM_PROVIDER", "demo")
 model_name = os.getenv("LLM_MODEL", "gpt-4.1-mini")
 
 st.title("AI Business Intelligence Platform")
-st.caption("Analytics • LLM Agent • RAG • Executive Summary • n8n Automation")
+st.caption("Analytics | LLM Agent | RAG | Executive Summary | n8n Automation")
 
 with st.sidebar:
     st.header("Configuration")
@@ -56,8 +63,8 @@ with tab1:
     with col2:
         st.markdown("### Auto Insights")
         for item in auto_insights:
-            badge = "??" if item["severity"] == "warning" else "??"
-            st.write(f"{badge} **{item['title']}** — {item['message']}")
+            badge = "[!]" if item["severity"] == "warning" else "[i]"
+            st.write(f"{badge} **{item['title']}** - {item['message']}")
 
     with col3:
         st.markdown("### Inactive Users")

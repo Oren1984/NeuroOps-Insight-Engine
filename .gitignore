@@ -1,9 +1,48 @@
+# .gitignore
+
+# Python
 __pycache__/
-.venv/
-.env
 *.pyc
 *.pyo
 *.pyd
+
+
+# Virtual environments
+env/
+venv/
+env/
+
+
+# Environment variables
+.env
+.env.*
+
+
+# Databases
 *.db
 *.sqlite
+*.sqlite3
+
+
+# Streamlit
 .streamlit/
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# IDE / Editor
+.vscode/
+.idea/
+
+
+# Logs
+*.log
+
+
+# Build artifacts
+
+dist/
+build/

@@ -1,3 +1,13 @@
+# docker/docker-compose.yml
+# This docker-compose file defines two services:
+# 1. ai-business-intelligence-agent: This is the main application built from the Dockerfile in the parent directory. 
+# It exposes port 8501 and mounts the data directory for persistent storage. 
+# It also uses environment variables from the .env file in the parent directory.
+
+# 2. n8n: This is an automation tool that simulates outgoing automation. 
+# It exposes port 5678 and uses a named volume for persistent storage of its data. 
+# It is configured to restart unless stopped.
+
 services:
   ai-business-intelligence-agent:
     build:
