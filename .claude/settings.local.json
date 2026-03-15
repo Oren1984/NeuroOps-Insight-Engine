@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python -m py_compile src/utils/config.py src/data_loader/loader.py src/agent/agent.py src/analytics/analytics.py src/analytics/insight_engine.py src/analytics/auto_insights.py src/analytics/executive_summary.py src/llm/provider.py src/rag/retriever.py src/integrations/n8n_client.py src/dashboard/dashboard.py main.py && echo \"ALL SYNTAX OK\")",
-      "Bash(python main.py 2>&1)"
+      "Bash(python main.py 2>&1)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(python:*)"
     ]
   }
 }

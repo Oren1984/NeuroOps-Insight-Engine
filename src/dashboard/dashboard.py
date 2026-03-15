@@ -5,7 +5,11 @@
 # executive summary generation,
 # and n8n automation features into a cohesive business intelligence platform.
 
+import sys
 import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 import streamlit as st
 from src.data_loader.loader import init_sqlite
 from src.analytics.analytics import (
